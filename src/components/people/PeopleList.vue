@@ -4,11 +4,12 @@
         <h1 class="starWarsStyle text-warning text-center title">People</h1>
         <div class="clearfix mt-3">
             <form @submit.prevent="search">
-                <div class="float-left min-width-300">
-                    <input v-model="searchValue" class="form-control" placeholder="Search by Name...">
-                </div>
-                <div class="float-left ml-2">
-                    <button class="btn btn-outline-secondary">Search</button>
+                <div class="input-group">
+                    <input ref="searchInput" id="search" v-model="searchValue" class="form-control" placeholder="Search by Name...">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary" type="submit"><i class="fas fa-search"></i> Search</button>
+                        <button v-on:click.prevent="clear" class="btn btn-outline-secondary" type="button"><i class="fas fa-times"></i> Clear</button>
+                    </div>
                 </div>
             </form>
         </div>
@@ -18,15 +19,35 @@
             We tried so hard, but in the end, nothing was found...
         </div>
         <div class="row mt-3">
-            <st-people-item
-                v-for="person in people"
-                :key="person.id"
-                :id="person.id"
-                :name="person.name"
-                :gender="person.gender"
-                :birth_date="person.birth_date"
-                :height="person.height">
-            </st-people-item>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Birth Year</th>
+                        <th scope="col">Height</th>
+                        <th scope="col">Mass</th>
+                        <th scope="col">Hair Color</th>
+                        <th scope="col">Skin Color</th>
+                        <th scope="col">Eye Color</th>
+                        <th scope="col">Gender</th>
+                    </tr>
+                </thead>
+                <tbody>
+                        <st-people-item
+                            v-for="person in people"
+                            :key="person.id"
+                            :id="person.id"
+                            :name="person.name"
+                            :birth_year="person.birth_year"
+                            :height="person.height"
+                            :mass="person.mass"
+                            :hair_color="person.hair_color"
+                            :skin_color="person.skin_color"
+                            :eye_color="person.eye_color"
+                            :gender="person.gender">
+                        </st-people-item>
+                </tbody>
+            </table>
         </div>
     </div>
 </template>
@@ -62,6 +83,11 @@
                     NProgress.done();
                 }
             );
+        },
+        clear(){
+            this.searchValue='';
+            this.$refs.searchInput.value = null;
+            this.search();
         }
     },
     components: {
