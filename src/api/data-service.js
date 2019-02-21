@@ -1,14 +1,23 @@
 import axios from 'axios';
-import constant from '../constants';
+import constants from '../constants';
 
 export default {
-    getPeopleRequest(){
-       return axios.get(constant.baseURL + "/people");
+    getPeople(){
+       return axios.get(constants.baseURL + "/people/");
     },
-    getPlanetsRequest(){
-        return axios.get(constant.baseURL + "/planets");
+    getPeopleByName(searchValue){
+        return axios.get(constants.baseURL + "/people?search=" + searchValue);
+     },
+    getPlanets(){
+        return axios.get(constants.baseURL + "/planets");
     },
-    getStarshipsRequest(){
-        return axios.get(constant.baseURL + "/starships");
-    }
+    getPlanetsByName(searchValue){
+        return axios.get(constants.baseURL + "/planets?search=" + searchValue);
+     },
+    getStarships(){
+        return axios.get(constants.baseURL + "/starships");
+    },
+    getStarshipsByName(searchValue){
+        return axios.get(constants.baseURL + "/starships?search=" + searchValue);
+     },
 };

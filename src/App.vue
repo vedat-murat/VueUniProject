@@ -1,10 +1,22 @@
 <template>
   <div id="app">
-    <router-view name="navigation"></router-view>
+    <navigation></navigation>
     <router-view></router-view>
-    <router-view name="footer"></router-view>
+    <sfooter></sfooter>
   </div>
 </template>
+
+<script>
+    import Navigation from './components/navigation/Navigation';
+    import StFooter from './components/footer/Footer';
+
+    export default {
+        components: {
+            navigation: Navigation,
+            sfooter: StFooter
+        }
+    }
+</script>
 
 <style scoped>
   #app {

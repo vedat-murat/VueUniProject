@@ -1,1 +1,48 @@
 @import "~bootstrap/scss/bootstrap";
+
+@font-face {
+    font-family: StarOut;
+    src: url("./fonts/Starjout.ttf");
+}
+
+@font-face {
+    font-family: StarJedi;
+    src: url("./fonts/Starjedi.ttf");
+}
+
+@font-face {
+    font-family: StarHol;
+    src: url("./fonts/Starjhol.ttf");
+}
+
+body {
+    //font-family: 'Gloria Hallelujah', cursive;
+    //font-family: 'StarJedi';
+    font-weight: 80;
+  }
+
+  .starWarsStyle{
+    font-family: 'StarJedi';
+    font-weight: 100;
+  }
+  .title{
+    font-size: 65px;
+  }
+  .sub-title{
+    font-size: 35px;
+    padding-top: 25px;
+  }
+  .footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    line-height: 60px;
+  }
+  .pageLayout{
+      margin-bottom: 90px;
+  }
+  .min-width-300{
+      min-width: 300px;
+  }
