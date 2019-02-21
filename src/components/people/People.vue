@@ -1,5 +1,5 @@
 <template>
-    <div class="container">
+    <div class="container pageLayout">
         <st-people-list></st-people-list>
     </div>
 </template>

@@ -1,24 +1,15 @@
 <template>
-    <div class="container">
-  </div>
+    <div class="container pageLayout">
+        <st-planets-list></st-planets-list>
+    </div>
 </template>
 
 <script>
-import dataService from '../../api/data-service';
+    import StPlanetsList from './PlanetsList';
 
-export default {
-    name: 'planet',
-    data(){
-        return {
-            planet: []
-        }
-    },
-    created() {
-        dataService.getPlanetsRequest().then(
-           response =>{
-               this.planet = response.data.results;
-           }
-       );
+    export default {
+        components: {
+            StPlanetsList,
+        }    
     }
-}
 </script>

@@ -5,8 +5,8 @@
           class="mb-2">
         <span>{{ birth_date }}</span>      
         <p class="card-text">
-          {{ height }}<br>
-          {{ gender }}
+          <span>Height: {{ height }}</span><br>
+          <span>Gender: {{ gender }}</span>
         </p>
       </b-card>
   </div>

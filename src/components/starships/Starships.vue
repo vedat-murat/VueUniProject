@@ -1,24 +1,15 @@
 <template>
-    <div></div>
-
+    <div class="container pageLayout">
+        <st-starships-list></st-starships-list>
+    </div>
 </template>
 
 <script>
-import dataService from '../../api/data-service';
+    import StStarshipsList from './StarshipsList';
 
-export default {
-    name: 'starship',
-    data(){
-        return {
-            starship: []
-        }
-    },
-    created() {
-        dataService.getStarshipsRequest().then(
-           response =>{
-               this.starship = response.data.results;
-           }
-       );
+    export default {
+        components: {
+            StStarshipsList,
+        }    
     }
-}
 </script>
