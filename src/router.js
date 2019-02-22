@@ -24,7 +24,7 @@ router.beforeResolve((to, from, next) => {
         // Start the route progress bar.
         NProgress.start();
     }
-    next()
+    next();
   })
   
   router.afterEach((to, from) => {

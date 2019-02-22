@@ -24,6 +24,6 @@
       eye_color: String,
       gender: String
     },
-    name: 'st-people-item',
+      name: 'st-people-item',
     }
 </script>
