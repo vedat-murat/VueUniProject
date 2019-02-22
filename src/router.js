@@ -1,6 +1,5 @@
 import Vue from 'vue';
 import Router from "vue-router";
-import NProgress from "vue"
 import People from "./components/people/People";
 import About from "./components/about/About";
 import Planets from "./components/planets/Planets";
