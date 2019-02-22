@@ -47,3 +47,23 @@ body {
   .min-width-300{
       min-width: 300px;
   }
+  .planetItemCard{
+    width: 100%;
+    min-height: 320px;
+    border: 1px solid black;
+  }
+  .planetItemCardimage{
+    height: 130px; 
+    object-fit: cover; 
+    overflow: hidden;
+  }
+  .starshipItemCard{
+    width: 100%;
+    min-height: 590px;
+    border: 1px solid black;
+  }
+  .starshipItemCardimage{
+    height: 250px; 
+    object-fit: cover; 
+    overflow: hidden;
+  }

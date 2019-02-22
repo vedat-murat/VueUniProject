@@ -13,11 +13,6 @@
                 </div>
             </form>
         </div>
-        <div class="row mt-3 starWarsStyle sub-title text-center" v-if="!people || !people.length">
-            Wait for a while...<br>
-            Sorry about that!<br>
-            We tried so hard, but in the end, nothing was found...
-        </div>
         <div class="row mt-3">
             <table class="table table-striped">
                 <thead>
@@ -48,6 +43,11 @@
                         </st-people-item>
                 </tbody>
             </table>
+        </div>
+        <div class="row mt-3 starWarsStyle sub-title text-center" v-if="!people || !people.length">
+            Wait for a while...<br>
+            Sorry about that!<br>
+            We tried so hard, but in the end, nothing was found...
         </div>
     </div>
 </template>
@@ -91,7 +91,7 @@
         }
     },
     components: {
-      StPeopleItem,
+        StPeopleItem,
     }
   };
 </script>
